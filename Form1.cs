@@ -16,5 +16,33 @@ namespace ukol1_metody
         {
             InitializeComponent();
         }
+
+        public double Obsah(double a)
+        {
+            return 4 * a;//ctverec
+        }
+        public double Obsah(double a, double b)
+        {
+            return a * b;//obdelnik
+        }
+        public double Objem(double a)
+        {
+            return a * a * a; //krychle
+        }
+        public double Objem(double a, double b, double c)
+        {
+            return a * b * c;//kvadr
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double a = (double)numericUpDown1.Value;
+            double b = (double)numericUpDown2.Value;
+            double c = (double)numericUpDown3.Value;
+            labelCtverecObsah.Text = "Čtverec:  "+Obsah(a).ToString();
+            labelObdelnikObsah.Text = "Obdelník:  " + Obsah(a,b).ToString();
+            labelKrychleObjem.Text = "Krychle:  " + Objem(a).ToString();
+            labelKvadrObjem.Text = "Kvádr:  " + Objem(a,b,c).ToString();
+        }
     }
 }
